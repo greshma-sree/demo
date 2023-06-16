@@ -1,28 +1,26 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
 import static org.openqa.selenium.By.*;
+
 public class DemoNewUser {
-
     WebDriver driver = null;
-
     @DataProvider(name = "data-set")
     public static Object[][] DataSet() {
         Object[][] obj = {
                 {"Valid","Girish1234@gmail.com", "", "Renu@1234"},
-                {"Invalid","milkah", "Radha", "Radha@1234"},
+                {"Invalid","milkah", "Radha","Radha@1234"},
         };
         return obj;
     }
-
     @BeforeMethod
     public void setUp() throws InterruptedException {
         String ChromeDriverPath="C:\\software\\selenium\\chromedriver_win32\\chromedriver.exe";
@@ -33,17 +31,14 @@ public class DemoNewUser {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(1000, TimeUnit.MILLISECONDS);
         Thread.sleep(2000);
-
         String signUpUrl = "https://login.mailchimp.com/signup/";
         driver.get(signUpUrl);
     }
-
     @AfterMethod
     public void tearDown() throws InterruptedException {
         Thread.sleep(2000);
         driver.quit();
     }
-
     @Test(dataProvider = "data-set")
     public void search(String type,String email, String username, String password) {
         // WebDriver driver = null;

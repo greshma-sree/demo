@@ -12,11 +12,11 @@
     "password": "secret_sauce"
   },
   "tc04": {
-    "searchText": "performance_glitch_user",
-    "expectedMessage": "secret_sauce"
+    "username": "performance_glitch_user",
+    "password": "secret_sauce"
   },
   "tc05": {
-    "searchText": "Problem_out_user",
+    "username": "Problem_out_user",
     "password": "asdgsggdja"
   }
 }

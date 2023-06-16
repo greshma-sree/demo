@@ -1,0 +1,22 @@
+{
+  "tc01": {
+    "searchText": "a",
+    "expectedMessage": "Computers Found"
+  },
+  "tc02": {
+    "searchText": "0",
+    "expectedMessage": "Computers Found"
+  },
+  "tc03": {
+    "searchText": " ",
+    "expectedMessage": "Computers Found"
+  },
+  "tc04": {
+    "searchText": "asci",
+    "expectedMessage": "Computers Found"
+  },
+  "tc05": {
+    "searchText": "acerxx",
+    "expectedMessage": "NO Computers Found"
+  }
+}
